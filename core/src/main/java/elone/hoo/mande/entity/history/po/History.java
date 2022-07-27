@@ -21,7 +21,7 @@ public class History {
 
   @Id
   @GeneratedValue(generator = "snowFlakeIdPlugin")
-  @GenericGenerator(name = "snowFlakeIdPlugin", strategy = "elone.hoo.mande.plugins.snowFlakeIdPlugin")
+  @GenericGenerator(name = "snowFlakeIdPlugin", strategy = "elone.hoo.mande.plugins.flake.snowFlakeIdPlugin")
   private String id;
 
   @Column(name = "name")

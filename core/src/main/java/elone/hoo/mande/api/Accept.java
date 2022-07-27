@@ -4,10 +4,7 @@ import com.restful.Result;
 import elone.hoo.mande.entity.history.dto.InstallHistory;
 import elone.hoo.mande.entity.history.po.History;
 import elone.hoo.mande.service.history.HistoryService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -17,6 +14,11 @@ public class Accept {
 
   @Resource
   private HistoryService historyService;
+
+  @GetMapping("/hello")
+  public Result hello() {
+    return Result.success("hello");
+  }
 
   @PostMapping("/install")
   public Result install(@RequestBody InstallHistory entity) {

@@ -1,6 +1,8 @@
 package elone.hoo.mande;
 
 import javax.annotation.Resource;
+
+import elone.hoo.mande.entity.history.dto.InstallHistory;
 import org.junit.jupiter.api.Test;
 import elone.hoo.mande.entity.history.po.History;
 import elone.hoo.mande.service.history.HistoryService;
@@ -18,6 +20,7 @@ class MandeTests {
 
   @Test
   void saveHistory(){
+    historyService.save(new InstallHistory().setModelId("1").setContent("1").setHeaders("1"));
   }
 
 }

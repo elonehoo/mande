@@ -1,4 +1,4 @@
-package elone.hoo.mande.plugins;
+package elone.hoo.mande.plugins.flake;
 
 import org.hibernate.HibernateException;
 import org.hibernate.engine.spi.SharedSessionContractImplementor;
