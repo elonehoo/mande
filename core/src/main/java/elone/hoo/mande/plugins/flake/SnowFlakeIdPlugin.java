@@ -9,7 +9,7 @@ import java.io.Serializable;
 import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 
-public class snowFlakeIdPlugin implements IdentifierGenerator {
+public class SnowFlakeIdPlugin implements IdentifierGenerator {
   /**
    * start timestamp
    */
