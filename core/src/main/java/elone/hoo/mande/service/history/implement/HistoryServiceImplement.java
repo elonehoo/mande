@@ -8,13 +8,21 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
+/**
+ * History service implement
+ * @author Elone Hoo <huchengyea@163.com>
+ */
 @Service
 public class HistoryServiceImplement implements HistoryService {
 
   @Resource
   private HistoryStore historyStore;
 
-
+  /**
+   * Save history entity
+   * @param entity History entity
+   * @return History entity
+   */
   @Override
   public History save(InstallHistory entity) {
     History history = historyStore.save(entity.useHistory());

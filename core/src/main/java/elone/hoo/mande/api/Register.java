@@ -3,7 +3,6 @@ package elone.hoo.mande.api;
 import com.restful.Result;
 import elone.hoo.mande.entity.whitelist.dto.InstallWhitelist;
 import elone.hoo.mande.service.whitelist.WhitelistService;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

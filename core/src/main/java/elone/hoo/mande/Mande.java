@@ -3,6 +3,10 @@ package elone.hoo.mande;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Main Application
+ * @author Elone Hoo <huchengyea@163.com>
+ */
 @SpringBootApplication
 public class Mande {
 

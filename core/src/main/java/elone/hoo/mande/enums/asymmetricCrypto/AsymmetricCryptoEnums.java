@@ -1,5 +1,9 @@
 package elone.hoo.mande.enums.asymmetricCrypto;
 
+/**
+ * enumeration of encryption modes
+ * @author Elone Hoo <huchengyea@163.com>
+ */
 public enum AsymmetricCryptoEnums {
 
     RSA("RSA");

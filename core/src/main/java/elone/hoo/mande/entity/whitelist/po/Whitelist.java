@@ -9,6 +9,10 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.util.Date;
 
+/**
+ * associate the Whitelist database and connect through JPA.
+ * @author Elone Hoo <huchengyea@163.com>
+ */
 @Getter
 @Setter
 @Entity

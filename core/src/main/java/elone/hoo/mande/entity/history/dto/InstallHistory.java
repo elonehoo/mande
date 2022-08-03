@@ -21,6 +21,10 @@ public class InstallHistory {
 
   private String content;
 
+  /**
+   * convert the InstallHistory to History.
+   * @return History
+   */
   public History useHistory() {
     return History.builder()
         .modelId(this.modelId)

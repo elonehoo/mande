@@ -1,7 +1,6 @@
 package elone.hoo.mande.entity.whitelist.dto;
 
 import elone.hoo.mande.entity.whitelist.po.Whitelist;
-import elone.hoo.mande.plugins.listener.StoreListenerPlugins;
 import elone.hoo.mande.plugins.rsa.AsymmetricCryptoPlugin;
 import lombok.*;
 import lombok.experimental.Accessors;
@@ -19,6 +18,11 @@ public class InstallWhitelist {
 
   private String name;
 
+  /**
+   * RSA encryption of organization name through publickKey
+   * @param publicKey public key
+   * @return encrypted organization name
+   */
   public Whitelist useWhitelist(String publicKey) {
     try {
       return Whitelist.builder()

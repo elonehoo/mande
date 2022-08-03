@@ -1,8 +1,11 @@
 package elone.hoo.mande.enums.httpHeader;
 
+/**
+ * enumeration of http headers
+ * @author Elone Hoo <huchengyea@163.com>
+ */
 public enum HttpHeaderEnums {
 
-  // app-key
   APP_KEY("app-key"),
   APP_PAIR("app-pair")
   ;

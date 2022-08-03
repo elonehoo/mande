@@ -9,6 +9,10 @@ import java.io.Serializable;
 import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 
+/**
+ * The actual implementation of the Snowflake ID algorithm
+ * @author Elone Hoo <huchengyea@163.com>
+ */
 public class SnowFlakeIdPlugin implements IdentifierGenerator {
   /**
    * start timestamp

@@ -8,6 +8,10 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.format.annotation.DateTimeFormat;
 
+/**
+ * associate the History database and connect through JPA.
+ * @author Elone Hoo <huchengyea@164.com>
+ */
 @Getter
 @Setter
 @Entity

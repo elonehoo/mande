@@ -5,6 +5,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
+/**
+ * History store
+ * @author Elone Hoo <huchengyea@163.com>
+ */
 @Repository
 public interface HistoryStore extends JpaRepository<History,String>, JpaSpecificationExecutor<History>{
 

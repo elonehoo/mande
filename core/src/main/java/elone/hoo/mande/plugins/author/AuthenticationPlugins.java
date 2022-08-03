@@ -1,27 +1,47 @@
 package elone.hoo.mande.plugins.author;
 
-
-import elone.hoo.mande.enums.httpHeader.HttpHeaderEnums;
+import elone.hoo.mande.entity.whitelist.po.Whitelist;
+import elone.hoo.mande.exception.UnauthorizedException;
+import elone.hoo.mande.service.whitelist.WhitelistService;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.HandlerInterceptor;
 
-import javax.servlet.*;
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
-import java.util.Enumeration;
+import javax.servlet.http.HttpServletResponse;
 import java.util.logging.Logger;
 
+/**
+ * Intercept before the controller to judge whether the app-key can be carried out.
+ * @author Elone Hoo <huchengyea@163.com>
+ */
 @Order(1)
 @Component
-public class AuthenticationPlugins implements Filter {
+public class AuthenticationPlugins implements HandlerInterceptor {
+
+  @Resource
+  private WhitelistService whitelistService;
 
   private Logger log = Logger.getLogger("elone.hoo.mande.plugins.author");
 
+  /**
+   * Intercept before the controller to judge whether the app-key can be carried out.
+   * @param request HttpServletRequest
+   * @param response HttpServletResponse
+   * @param handler Object
+   * @return boolean
+   * @throws Exception 中间可能会产生很多问题
+   */
   @Override
-  public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-    HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
-    String header = httpServletRequest.getHeader(HttpHeaderEnums.APP_KEY.getName());
-    log.warning("app-key: " + header);
-    filterChain.doFilter(servletRequest, servletResponse);
+  public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+    String appKey = request.getHeader("app-key");
+    log.info("app-key" + appKey);
+    Whitelist whitelist = whitelistService.getByAppKey(appKey);
+    if (whitelist == null) {
+      throw new UnauthorizedException();
+    }
+    return HandlerInterceptor.super.preHandle(request, response, handler);
   }
+
 }
