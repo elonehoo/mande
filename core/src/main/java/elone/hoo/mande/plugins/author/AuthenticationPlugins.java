@@ -1,6 +1,7 @@
 package elone.hoo.mande.plugins.author;
 
 
+import elone.hoo.mande.enums.httpHeader.HttpHeaderEnums;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -19,7 +20,8 @@ public class AuthenticationPlugins implements Filter {
   @Override
   public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
     HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
-
+    String header = httpServletRequest.getHeader(HttpHeaderEnums.APP_KEY.getName());
+    log.warning("app-key: " + header);
     filterChain.doFilter(servletRequest, servletResponse);
   }
 }

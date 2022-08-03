@@ -1,12 +1,13 @@
-package elone.hoo.mande.entity.history.po;
+package elone.hoo.mande.entity.whitelist.po;
 
-import lombok.*;
-import java.util.Date;
-import javax.persistence.*;
-import lombok.experimental.Accessors;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.*;
+import lombok.experimental.Accessors;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.persistence.*;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -15,29 +16,20 @@ import org.springframework.format.annotation.DateTimeFormat;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "history")
+@Table(name = "whitelist")
 @Accessors(chain = true)
-public class History {
+public class Whitelist {
 
   @Id
   @GeneratedValue(generator = "snowFlakeIdPlugin")
   @GenericGenerator(name = "snowFlakeIdPlugin", strategy = "elone.hoo.mande.plugins.flake.SnowFlakeIdPlugin")
   private String id;
 
+  @Column(name = "app_key")
+  private String appKey;
+
   @Column(name = "name")
   private String name;
-
-  @Column(name = "model_id")
-  private String modelId;
-
-  @Column(name = "headers")
-  private String headers;
-
-  @Column(name = "content")
-  private String content;
-
-  @Column(name = "state")
-  private Boolean state;
 
   @Column(name = "creation_time")
   @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
@@ -48,5 +40,4 @@ public class History {
   @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
   @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
   private Date modifyTime;
-
 }

@@ -26,7 +26,7 @@ public class InstallHistory {
         .modelId(this.modelId)
         .headers(this.headers)
         .content(this.content)
-        .createTime(new Date())
+        .creationTime(new Date())
         .build();
   }
 
