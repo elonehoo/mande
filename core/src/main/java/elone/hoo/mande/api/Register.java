@@ -17,9 +17,14 @@ public class Register {
   @Resource
   private WhitelistService whitelistService;
 
-  @PostMapping("/")
+  @PostMapping("/whitelist")
   public Result register(@RequestBody InstallWhitelist entity) {
     return Result.success(whitelistService.save(entity));
+  }
+
+  @PostMapping("/model")
+  public Result model(){
+    return null;
   }
 
 }
