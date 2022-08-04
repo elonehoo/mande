@@ -28,4 +28,15 @@ public class ModelServiceImplement implements ModelService {
   public Model save(InstallModel entity) {
     return modelStore.save(entity.useModel());
   }
+
+  /**
+   * Get model entity by id
+   *
+   * @param modelId model id
+   * @return model entity
+   */
+  @Override
+  public Model getById(String modelId) {
+    return modelStore.getReferenceById(modelId);
+  }
 }

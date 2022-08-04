@@ -23,7 +23,7 @@ class MandeTests {
 
   @Test
   void saveHistory(){
-    historyService.save(new InstallHistory().setModelId("1").setContent("1").setHeaders("1"));
+//    historyService.save(new InstallHistory().setModelId("1").setContent("1").setHeaders("1"));
   }
 
   @Test

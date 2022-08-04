@@ -14,4 +14,11 @@ public interface ModelService {
    * @return model entity
    */
   Model save(InstallModel entity);
+
+  /**
+   * Get model entity by id
+   * @param modelId model id
+   * @return model entity
+   */
+  Model getById(String modelId);
 }
