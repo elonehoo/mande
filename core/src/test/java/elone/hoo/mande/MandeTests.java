@@ -2,10 +2,12 @@ package elone.hoo.mande;
 
 import javax.annotation.Resource;
 
-import com.jayway.jsonpath.JsonPath;
-import com.jayway.jsonpath.ReadContext;
-import elone.hoo.mande.entity.history.dto.InstallHistory;
+import cn.hutool.http.HttpRequest;
+import cn.hutool.http.HttpResponse;
+import cn.hutool.http.Method;
 import elone.hoo.mande.enums.httpHeader.HttpHeaderEnums;
+import elone.hoo.mande.plugins.RequestPlugin.RequestPlugin;
+import elone.hoo.mande.plugins.json.JsonPlugin;
 import elone.hoo.mande.plugins.rsa.AsymmetricCryptoPlugin;
 import org.junit.jupiter.api.Test;
 import elone.hoo.mande.service.history.HistoryService;
@@ -52,9 +54,15 @@ class MandeTests {
 
   @Test
   void jsonPath(){
-    String json = "{\"name\":\"EloneHoo\",\"age\":18,\"address\":{\"city\":\"Beijing\",\"street\":\"Xuanwumen\"}}";
-    String read = JsonPath.read(json, "$.name");
-    System.out.println(read);
+    String json = "{\"name\":\"EloneHoo\",\"age\":\"18\",\"address\":\"hz\"}";
+    System.out.println(JsonPlugin.useJsonToMap(json));
+  }
+
+  @Test
+  void HttpTest(){
+    HttpRequest request = RequestPlugin.useRequest("http://localhost:8080/mande/yoho/get", "get");
+    HttpResponse response = RequestPlugin.useExecute(request);
+    System.out.println(response);
   }
 
 }
