@@ -2,6 +2,8 @@ package elone.hoo.mande;
 
 import javax.annotation.Resource;
 
+import com.jayway.jsonpath.JsonPath;
+import com.jayway.jsonpath.ReadContext;
 import elone.hoo.mande.entity.history.dto.InstallHistory;
 import elone.hoo.mande.enums.httpHeader.HttpHeaderEnums;
 import elone.hoo.mande.plugins.rsa.AsymmetricCryptoPlugin;
@@ -46,6 +48,13 @@ class MandeTests {
 
     System.out.println(AsymmetricCryptoPlugin.useDecrypt(encrypt, keyPair.get(1)));
 
+  }
+
+  @Test
+  void jsonPath(){
+    String json = "{\"name\":\"EloneHoo\",\"age\":18,\"address\":{\"city\":\"Beijing\",\"street\":\"Xuanwumen\"}}";
+    String read = JsonPath.read(json, "$.name");
+    System.out.println(read);
   }
 
 }
