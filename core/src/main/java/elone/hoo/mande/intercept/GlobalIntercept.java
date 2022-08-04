@@ -24,19 +24,19 @@ public class GlobalIntercept {
    */
   @ExceptionHandler(value = UnauthorizedException.class)
   public Result UnauthorizedException(UnauthorizedException e){
-    log.warning("UnauthorizedException ===> " + e.getMessage());
+    log.warning("UnauthorizedException [" + log.getName() + ": " + e.getMessage() + "]");
     return Result.unauthorized(e.getMessage());
   }
 
   @ExceptionHandler(value = IllegalArgumentException.class)
   public Result IllegalArgumentException(IllegalArgumentException e){
-    log.warning("IllegalArgumentException ===> " + e.getMessage());
+    log.warning("IllegalArgumentException [" + log.getName() + ": " + e.getMessage() + "]");
     return Result.unauthorized(e.getMessage());
   }
 
   @ExceptionHandler(value = Exception.class)
   public Result Exception(Exception e){
-    log.warning("Exception ===> " + e.getMessage());
+    log.warning("Exception [" + log.getName() + ": " + e.getMessage() + "]");
     return Result.unauthorized(e.getMessage());
   }
 }

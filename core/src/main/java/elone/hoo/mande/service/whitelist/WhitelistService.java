@@ -20,5 +20,5 @@ public interface WhitelistService {
    * @param appKey app_key
    * @return information in the database
    */
-  Whitelist getByAppKey(String appKey) throws IllegalAccessException;
+  Whitelist getByAppKey(String appKey);
 }

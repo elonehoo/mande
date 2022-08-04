@@ -15,10 +15,10 @@ public class UnauthorizedException extends RuntimeException{
   private Logger log = Logger.getLogger("elone.hoo.mande.exception");
 
   public UnauthorizedException() {
-    super("the request requires user authentication information.");
+    super("the requires user authentication information.");
   }
 
   public UnauthorizedException(Throwable cause) {
-    super("the request requires user authentication information.", cause);
+    super("the requires user authentication information.", cause);
   }
 }

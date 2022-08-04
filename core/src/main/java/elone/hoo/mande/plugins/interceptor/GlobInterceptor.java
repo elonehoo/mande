@@ -21,6 +21,6 @@ public class GlobInterceptor implements WebMvcConfigurer {
   public void addInterceptors(InterceptorRegistry registry) {
     registry.addInterceptor(authenticationPlugins)
       .addPathPatterns("/**")
-      .excludePathPatterns("/mande/register/");
+      .excludePathPatterns("/register/whitelist", "/register/model");
   }
 }

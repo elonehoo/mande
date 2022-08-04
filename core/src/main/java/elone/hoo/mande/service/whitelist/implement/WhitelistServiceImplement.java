@@ -49,7 +49,6 @@ public class WhitelistServiceImplement implements WhitelistService {
    */
   @Override
   public Whitelist getByAppKey(String appKey) {
-    log.info("get by app_key" + appKey);
     String decrypt;
     //解密
     try {

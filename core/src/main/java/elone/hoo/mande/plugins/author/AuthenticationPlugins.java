@@ -31,12 +31,12 @@ public class AuthenticationPlugins implements HandlerInterceptor {
    * @param response HttpServletResponse
    * @param handler Object
    * @return boolean
-   * @throws Exception 中间可能会产生很多问题
+   * @throws Exception There may be many problems in the middle
    */
   @Override
   public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
     String appKey = request.getHeader("app-key");
-    log.info("app-key" + appKey);
+    log.warning("app-key [" + log.getName() + ": " + appKey + "]");
     Whitelist whitelist = whitelistService.getByAppKey(appKey);
     if (whitelist == null) {
       throw new UnauthorizedException();
