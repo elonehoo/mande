@@ -1,6 +1,5 @@
 package elone.hoo.mande.api;
 
-import com.axios.Axios;
 import com.restful.Result;
 import elone.hoo.mande.entity.history.dto.InstallHistory;
 import elone.hoo.mande.entity.history.po.History;
