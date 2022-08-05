@@ -37,12 +37,11 @@ public class AuthenticationPlugins implements HandlerInterceptor {
   @Override
   public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
     String appKey = request.getHeader("app-key");
-    log.warning("app-key [" + log.getName() + ": " + appKey + "]");
+    log.info("app-key [" + log.getName() + ": " + appKey + "]");
     Whitelist whitelist = whitelistService.getByAppKey(appKey);
     if (whitelist == null) {
       throw new UnauthorizedException();
     }
     return HandlerInterceptor.super.preHandle(request, response, handler);
   }
-
 }

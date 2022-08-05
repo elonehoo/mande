@@ -26,6 +26,10 @@ spring:
     hibernate:
       ddl-auto: update
     open-in-view: false
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
 
 appKey:
   publicKey: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDOFdTcJhz0o/46NAwnZBSCgY34u/M4aRowvhmalihlZ6P0VscHCuZepH1GZnbqE2DceJxReDXwvEwpxA7R7YlsTGXoo35aV8tidT2APtpVxnj8RXG14zqkIUhhAiMnLqQ5N/JuyQsDng6kNoTcpENXaz70gatlEPeX4p2VV7bv0QIDAQAB
