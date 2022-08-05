@@ -14,6 +14,7 @@ import elone.hoo.mande.service.history.HistoryService;
 import org.springframework.boot.test.context.SpringBootTest;
 import elone.hoo.mande.service.history.implement.HistoryServiceImplement;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @SpringBootTest
@@ -60,9 +61,26 @@ class MandeTests {
 
   @Test
   void HttpTest(){
-    HttpRequest request = RequestPlugin.useRequest("http://localhost:8080/mande/yoho/get", "get");
+    HttpRequest request = RequestPlugin.useRequest("http://localhost:8080/mande/yoho/get2", "get");
+    Map<String,String> headers = new HashMap<>();
+    headers.put("app-key","123");
+    RequestPlugin.useHeaders(request, headers);
     HttpResponse response = RequestPlugin.useExecute(request);
     System.out.println(response);
+    System.out.println(response.isOk());
+  }
+
+  @Test
+  void regTest(){
+    //中国身份证的正则
+    String reg = "^[1-9]\\d{5}(18|19|([23]\\d))\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\d{3}[0-9Xx]$";
+    //中国手机电话号码的正则
+    String reg2 = "^((13[0-9])|(14[5,7])|(15[0-3,5-9])|(17[0,3,5-8])|(18[0-9])|166|198|199|(147))\\d{8}$";
+    //电子邮箱的正则
+    String reg3 = "^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*\\.[a-zA-Z0-9]{2,6}$";
+    //中国社会统一信用代码的正则
+    String reg4 = "^[0-9A-HJ-NPQRTUWXY]{2}[0-9A-HJ-NPQRTUWXY]{6}[0-9A-HJ-NPQRTUWXY]{10}$";
+
   }
 
 }

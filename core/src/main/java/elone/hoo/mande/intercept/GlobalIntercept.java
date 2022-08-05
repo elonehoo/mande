@@ -2,9 +2,11 @@ package elone.hoo.mande.intercept;
 
 import com.restful.Result;
 import elone.hoo.mande.exception.UnauthorizedException;
+import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import java.rmi.ServerException;
 import java.util.logging.Logger;
 
 /**
@@ -37,6 +39,18 @@ public class GlobalIntercept {
   @ExceptionHandler(value = Exception.class)
   public Result Exception(Exception e){
     log.warning("Exception [" + log.getName() + ": " + e.getMessage() + "]");
+    return Result.unauthorized(e.getMessage());
+  }
+
+  @ExceptionHandler(value = ChangeSetPersister.NotFoundException.class)
+  public Result NotFoundException(ChangeSetPersister.NotFoundException e){
+    log.warning("NotFoundException [" + log.getName() + ": " + e.getMessage() + "]");
+    return Result.unauthorized(e.getMessage());
+  }
+
+  @ExceptionHandler(value = ServerException.class)
+  public Result ServerException(ServerException e){
+    log.warning("ServerException [" + log.getName() + ": " + e.getMessage() + "]");
     return Result.unauthorized(e.getMessage());
   }
 }

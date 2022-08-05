@@ -25,6 +25,10 @@ public class RequestPlugin {
     return request.headerMap(headers,true);
   }
 
+  public static HttpRequest useBody(HttpRequest request,String json){
+    return request.body(json);
+  }
+
   public static HttpResponse useExecute(HttpRequest request){
     return request.execute();
   }
