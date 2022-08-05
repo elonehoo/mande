@@ -45,7 +45,7 @@ public class HistoryServiceImplement implements HistoryService {
    * @return History entity
    */
   @Override
-  public History accept(Whitelist whitelist, Model model, InstallHistory entity) {
+  public HttpResponse accept(Whitelist whitelist, Model model, InstallHistory entity) {
     String historyName = whitelist.getName() + "[ request ]" + model.getName();
     History history = entity.useHistory(historyName);
     //get request method and url
@@ -62,6 +62,8 @@ public class HistoryServiceImplement implements HistoryService {
     HttpResponse response = RequestPlugin.useExecute(request);
     // determine whether the transmission is successful
     history.setState(response.isOk());
-    return null;
+
+    historyStore.save(history);
+    return response;
   }
 }

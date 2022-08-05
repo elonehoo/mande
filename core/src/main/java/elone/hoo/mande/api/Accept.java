@@ -1,5 +1,6 @@
 package elone.hoo.mande.api;
 
+import cn.hutool.http.HttpResponse;
 import com.restful.Result;
 import elone.hoo.mande.entity.history.dto.InstallHistory;
 import elone.hoo.mande.entity.history.po.History;
@@ -11,6 +12,7 @@ import elone.hoo.mande.service.whitelist.WhitelistService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.logging.Logger;
 
 /**
  * accept request
@@ -19,6 +21,8 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping("/accept")
 public class Accept {
+
+  private Logger log = Logger.getLogger("elone.hoo.mande.api");
 
   @Resource
   private WhitelistService whitelistService;
@@ -33,8 +37,8 @@ public class Accept {
   public Result accept(@RequestHeader(name = "app-key") String appKey,@RequestBody InstallHistory entity){
     Whitelist whitelist = whitelistService.getByAppKey(appKey);
     Model model= modelService.getById(entity.getModelId());
-    History history = historyService.accept(whitelist,model,entity);
-    return Result.success(history);
+    HttpResponse accept = historyService.accept(whitelist, model, entity);
+    return Result.success(accept.body());
   }
 
 }

@@ -1,5 +1,6 @@
 package elone.hoo.mande.service.history;
 
+import cn.hutool.http.HttpResponse;
 import elone.hoo.mande.entity.history.dto.InstallHistory;
 import elone.hoo.mande.entity.history.po.History;
 import elone.hoo.mande.entity.model.po.Model;
@@ -25,5 +26,5 @@ public interface HistoryService {
    * @param entity install history entity
    * @return History entity
    */
-  History accept(Whitelist whitelist, Model model, InstallHistory entity);
+  HttpResponse accept(Whitelist whitelist, Model model, InstallHistory entity);
 }

@@ -7,6 +7,7 @@ import elone.hoo.mande.store.model.ModelStore;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Optional;
 
 /**
  * Model service implement
@@ -37,6 +38,7 @@ public class ModelServiceImplement implements ModelService {
    */
   @Override
   public Model getById(String modelId) {
-    return modelStore.getReferenceById(modelId);
+    Optional<Model> model = modelStore.findById(modelId);
+    return model.get();
   }
 }
