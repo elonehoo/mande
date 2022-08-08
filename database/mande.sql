@@ -11,7 +11,7 @@
  Target Server Version : 80028
  File Encoding         : 65001
 
- Date: 08/08/2022 10:17:26
+ Date: 08/08/2022 17:38:25
 */
 
 SET NAMES utf8mb4;
@@ -28,6 +28,7 @@ CREATE TABLE `history` (
   `headers` longtext COMMENT 'request header',
   `content` longtext COMMENT 'request content',
   `state` bigint DEFAULT NULL COMMENT 'history state',
+  `promise` varchar(12) DEFAULT NULL COMMENT 'promise status',
   `creation_time` datetime DEFAULT NULL COMMENT 'creation time',
   `modify_time` datetime DEFAULT NULL COMMENT 'modilfy time',
   PRIMARY KEY (`id`)
