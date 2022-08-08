@@ -30,6 +30,17 @@ git clone git@github.com:elonehoo/mande.git
 
 Use idea or your favorite IDE to make personalized modifications, then package and deploy.
 
+## File
+
+```markdown
+- mande
+ - [lib](Jar packages bound to other businesses can be downloaded through maven)
+ - [core](middleware code)
+ - [database](sql file)
+ - [docs](Documentation written with VitePress)
+ - [web](possible front end)
+```
+
 ## API
 
 ### core-api
