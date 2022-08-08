@@ -33,6 +33,12 @@ public class Accept {
   @Resource
   private HistoryService historyService;
 
+  /**
+   * send a request to determine if the target server is down
+   * @param appKey the app key
+   * @param entity the request entity
+   * @return the result return value supported by standard V8 browsers
+   */
   @PostMapping("/")
   public Result accept(@RequestHeader(name = "app-key") String appKey,@RequestBody InstallHistory entity){
     Whitelist whitelist = whitelistService.getByAppKey(appKey);

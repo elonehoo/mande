@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
+/**
+ * unified registration interface function
+ * @author Elone Hoo <huchengyea@163.com>
+ */
 @RestController
 @RequestMapping("/register")
 public class Register {
@@ -22,11 +26,21 @@ public class Register {
   @Resource
   private ModelService modelService;
 
+  /**
+   * register a whitelisted user
+   * @param entity install whitelist entity
+   * @return the result return value supported by standard V8 browsers
+   */
   @PostMapping("/whitelist")
   public Result register(@RequestBody InstallWhitelist entity) {
     return Result.success(whitelistService.save(entity));
   }
 
+  /**
+   * register a model
+   * @param entity install model entity
+   * @return the result return value supported by standard V8 browsers
+   */
   @PostMapping("/model")
   public Result model(@RequestBody InstallModel entity){
     return Result.success(modelService.save(entity));
