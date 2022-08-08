@@ -45,4 +45,8 @@ Use idea or your favorite IDE to make personalized modifications, then package a
 
 ### core-api
 
-
+| url                 | method | description                                              |
+|:--------------------|:-------|:---------------------------------------------------------|
+| /accept/            | POST   | send a request to determine if the target server is down |
+| /register/whitelist | POST   | register a whitelisted user                              |
+| /register/model     | POST   | register a model                                         |
