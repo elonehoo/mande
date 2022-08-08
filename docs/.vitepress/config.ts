@@ -35,7 +35,7 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.svg',
     editLink: {
-      pattern: 'https://github.com/elonehoo/vue-hooks/tree/main/docs/:path',
+      pattern: 'https://github.com/elonehoo/mande/tree/main/docs/:path',
       text: 'Suggest changes to this page',
     },
     socialLinks: [
@@ -49,7 +49,7 @@ export default defineConfig({
     },
     nav: [
       { text: 'Guide', link: '/guide/' },
-      { text: 'composabl', link: '/composable/event' },
+      { text: 'Docs', link: '/components/' },
       {
         text: `v${version}`,
         items: [
@@ -67,7 +67,7 @@ export default defineConfig({
           text: 'Getting Started',
           items: [
             {
-              text: 'Why vue-hooks',
+              text: 'Why mande',
               link: '/guide/why',
             },
             {
@@ -81,13 +81,13 @@ export default defineConfig({
           ],
         },
       ],
-      '/composable/': [
+      '/components/': [
         {
-          text: 'Event',
+          text: 'core',
           items: [
             {
-              text: 'event',
-              link: '/composable/event',
+              text: 'core',
+              link: '/components/core',
             },
           ],
         },

@@ -18,7 +18,7 @@ public class Timing {
   @Resource
   private HistoryService historyService;
 
-  @Scheduled(fixedRate = 3000)
+  @Scheduled(fixedRate = 18000)
   public void scheduledTask() {
     log.info("scheduledTask [" + log.getName() + ": " + LocalDateTime.now() + "]");
     List<History> lists = historyService.getStateAndPromise(false,"asynchronous");

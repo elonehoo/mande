@@ -17,8 +17,8 @@ hero:
       text: Get Started
       link: /guide/
     - theme: alt
-      text: composable
-      link: /composable/event
+      text: docs
+      link: /components/
     - theme: alt
       text: Why mande?
       link: /guide/why
