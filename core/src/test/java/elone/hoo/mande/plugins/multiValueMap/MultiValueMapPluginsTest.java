@@ -13,9 +13,12 @@ public class MultiValueMapPluginsTest {
   @Test
   void toMapTest() {
     Map<String, List<String>> map = new HashMap<>();
-    map.put("key1", List.of("value1","value1-2","value1-3","value1-4"));
-    map.put("key2", List.of("value2","value2-2","value2-3","value2-4"));
-    map.put("key3", List.of("value3","value3-2","value3-3","value3-4"));
+    map.put("Keep-Alive", List.of("timeout=60"));
+    map.put("null", List.of("HTTP/1.1 404"));
+    map.put("Connection", List.of("keep-alive"));
+    map.put("Content-Length", List.of("8"));
+    map.put("Date", List.of("Mon, 08 Aug 2022 05:55:40 GMT"));
+    map.put("Content-Type", List.of("text/html;charset=UTF-8"));
     System.out.println(map);
     MultiValueMap<String, String> result = MultiValueMapPlugins.toMap(map);
     System.out.println(result);

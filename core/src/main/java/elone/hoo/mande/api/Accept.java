@@ -3,7 +3,6 @@ package elone.hoo.mande.api;
 import cn.hutool.http.HttpResponse;
 import com.restful.Result;
 import elone.hoo.mande.entity.history.dto.InstallHistory;
-import elone.hoo.mande.entity.history.po.History;
 import elone.hoo.mande.entity.model.po.Model;
 import elone.hoo.mande.entity.whitelist.po.Whitelist;
 import elone.hoo.mande.plugins.multiValueMap.MultiValueMapPlugins;
@@ -11,7 +10,6 @@ import elone.hoo.mande.service.history.HistoryService;
 import elone.hoo.mande.service.model.ModelService;
 import elone.hoo.mande.service.whitelist.WhitelistService;
 import org.springframework.http.HttpStatus;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -45,13 +43,12 @@ public class Accept {
    */
   @PostMapping("/")
   public Result accept(@RequestHeader(name = "app-key") String appKey, @RequestHeader(name = "promise",defaultValue = "synchronous") String promise, @RequestBody InstallHistory entity){
-    log.info("accept promise [ " + log.getName() + ": " + promise + " ]");
     Whitelist whitelist = whitelistService.getByAppKey(appKey);
     Model model= modelService.getById(entity.getModelId());
-    HttpResponse accept = historyService.accept(whitelist, model, entity);
+    HttpResponse accept = historyService.accept(whitelist, model, entity, promise);
     // Determine whether it is synchronous or asynchronous
     if("synchronous".equals(promise)){
-      return new Result(accept.body(), MultiValueMapPlugins.toMap(accept.headers()), HttpStatus.valueOf(accept.getStatus()));
+      return new Result(accept.body(), HttpStatus.valueOf(accept.getStatus()));
     }
     return Result.success(true);
   }
