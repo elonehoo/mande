@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 public class Yoho {
   @GetMapping("/get")
   public Result getYoho(){
-    return Result.success("get yoho");
+    return Result.notFounds("get yoho");
   }
 
   @PostMapping("/post")

@@ -11,7 +11,7 @@ public class Timing {
 
   private Logger log = Logger.getLogger("elone.hoo.mande.timing");
 
-  @Scheduled(fixedRate = 3000)
+//  @Scheduled(fixedRate = 3000)
   public void scheduledTask() {
     log.info("scheduledTask [" + log.getName() + ": " + LocalDateTime.now() + "]");
   }

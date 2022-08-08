@@ -9,6 +9,8 @@ import elone.hoo.mande.entity.whitelist.po.Whitelist;
 import elone.hoo.mande.service.history.HistoryService;
 import elone.hoo.mande.service.model.ModelService;
 import elone.hoo.mande.service.whitelist.WhitelistService;
+import org.springframework.http.HttpStatus;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -36,15 +38,21 @@ public class Accept {
   /**
    * send a request to determine if the target server is down
    * @param appKey the app key
+   * @param promise true is to make an asynchronous request. If the contacted server is down, it will be processed later. If false is a synchronous request, the result of the contacted server will be returned directly.
    * @param entity the request entity
    * @return the result return value supported by standard V8 browsers
    */
   @PostMapping("/")
-  public Result accept(@RequestHeader(name = "app-key") String appKey,@RequestBody InstallHistory entity){
+  public Result accept(@RequestHeader(name = "app-key") String appKey, @RequestHeader(name = "promise",defaultValue = "synchronous") String promise, @RequestBody InstallHistory entity){
+    log.info("accept promise [ " + log.getName() + ": " + promise + " ]");
     Whitelist whitelist = whitelistService.getByAppKey(appKey);
     Model model= modelService.getById(entity.getModelId());
     HttpResponse accept = historyService.accept(whitelist, model, entity);
-    return Result.success(accept.body());
+    // Determine whether it is synchronous or asynchronous
+    if("synchronous".equals(promise)){
+      return new Result(accept.body(), (MultiValueMap<String, String>) accept.headers(), HttpStatus.valueOf(accept.getStatus()));
+    }
+    return Result.success(true);
   }
 
 }
