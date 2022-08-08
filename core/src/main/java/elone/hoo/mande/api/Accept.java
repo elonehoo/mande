@@ -6,6 +6,7 @@ import elone.hoo.mande.entity.history.dto.InstallHistory;
 import elone.hoo.mande.entity.history.po.History;
 import elone.hoo.mande.entity.model.po.Model;
 import elone.hoo.mande.entity.whitelist.po.Whitelist;
+import elone.hoo.mande.plugins.multiValueMap.MultiValueMapPlugins;
 import elone.hoo.mande.service.history.HistoryService;
 import elone.hoo.mande.service.model.ModelService;
 import elone.hoo.mande.service.whitelist.WhitelistService;
@@ -50,7 +51,7 @@ public class Accept {
     HttpResponse accept = historyService.accept(whitelist, model, entity);
     // Determine whether it is synchronous or asynchronous
     if("synchronous".equals(promise)){
-      return new Result(accept.body(), (MultiValueMap<String, String>) accept.headers(), HttpStatus.valueOf(accept.getStatus()));
+      return new Result(accept.body(), MultiValueMapPlugins.toMap(accept.headers()), HttpStatus.valueOf(accept.getStatus()));
     }
     return Result.success(true);
   }
