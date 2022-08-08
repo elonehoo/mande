@@ -18,9 +18,20 @@
 
 ## Features
 
-- ⚡️ [SpringBoot](https://github.com/spring-projects/spring-boot), [JPA](https://github.com/spring-projects/spring-data-jpa), [restful](https://github.com/elonehoo/restful-return) - born with fastness.
+- ⚡️ [SpringBoot](https://github.com/spring-projects/spring-boot), [JPA](https://github.com/spring-projects/spring-data-jpa), [Restful](https://github.com/elonehoo/restful-return) - born with fastness.
 - 🗂 [SpringNative](https://github.com/spring-projects-experimental/spring-native) - provides beta support for compiling Spring applications to native executables using GraalVM native-image compiler.
 - 🔥 [lombok](https://github.com/projectlombok/lombok) - Very spicy additions to the Java programming language.
 
-## Use
+## Usage
+
+```shell
+git clone git@github.com:elonehoo/mande.git
+```
+
+Use idea or your favorite IDE to make personalized modifications, then package and deploy.
+
+## API
+
+### core-api
+
 
