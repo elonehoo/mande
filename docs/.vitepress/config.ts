@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-const version = "0.0.0"
+const version = "0.0.1"
 import {
   discord,
   font,
