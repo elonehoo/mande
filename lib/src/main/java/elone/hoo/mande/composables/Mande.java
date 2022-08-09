@@ -23,8 +23,7 @@ public class Mande {
     RequestPlugin.useHeaders(request, headers);
     body.put("modelId", modelId);
     RequestPlugin.useBody(request, JsonPlugin.useMapToJson(body));
-    HttpResponse response = RequestPlugin.useExecute(request);
-    return response;
+    return RequestPlugin.useExecute(request);
   }
 
   public HttpResponse useAllModel(){
@@ -32,8 +31,7 @@ public class Mande {
     HashMap<String, String> headers = new HashMap<>();
     headers.put("app-key", mandeStore.getAppKey());
     RequestPlugin.useHeaders(request, headers);
-    HttpResponse response = RequestPlugin.useExecute(request);
-    return response;
+    return RequestPlugin.useExecute(request);
   }
 
 }
