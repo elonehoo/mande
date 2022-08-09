@@ -7,6 +7,7 @@ import elone.hoo.mande.store.model.ModelStore;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -40,5 +41,15 @@ public class ModelServiceImplement implements ModelService {
   public Model getById(String modelId) {
     Optional<Model> model = modelStore.findById(modelId);
     return model.get();
+  }
+
+  /**
+   * Get all model entity
+   *
+   * @return model entity list
+   */
+  @Override
+  public List<Model> getAll() {
+    return modelStore.findAll();
   }
 }

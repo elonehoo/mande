@@ -6,7 +6,7 @@ import elone.hoo.mande.entity.history.dto.InstallHistory;
 import elone.hoo.mande.entity.history.po.History;
 import elone.hoo.mande.entity.model.po.Model;
 import elone.hoo.mande.entity.whitelist.po.Whitelist;
-import elone.hoo.mande.plugins.RequestPlugin.RequestPlugin;
+import elone.hoo.mande.plugins.request.RequestPlugin;
 import elone.hoo.mande.plugins.json.JsonPlugin;
 import elone.hoo.mande.service.history.HistoryService;
 import elone.hoo.mande.service.model.ModelService;

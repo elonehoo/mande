@@ -1,4 +1,4 @@
-package elone.hoo.mande.plugins.RequestPlugin;
+package elone.hoo.mande.plugins.request;
 
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;

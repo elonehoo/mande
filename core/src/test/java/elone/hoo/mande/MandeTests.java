@@ -4,9 +4,8 @@ import javax.annotation.Resource;
 
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
-import cn.hutool.http.Method;
 import elone.hoo.mande.enums.httpHeader.HttpHeaderEnums;
-import elone.hoo.mande.plugins.RequestPlugin.RequestPlugin;
+import elone.hoo.mande.plugins.request.RequestPlugin;
 import elone.hoo.mande.plugins.json.JsonPlugin;
 import elone.hoo.mande.plugins.rsa.AsymmetricCryptoPlugin;
 import org.junit.jupiter.api.Test;

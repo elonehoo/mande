@@ -3,6 +3,8 @@ package elone.hoo.mande.service.model;
 import elone.hoo.mande.entity.model.dto.InstallModel;
 import elone.hoo.mande.entity.model.po.Model;
 
+import java.util.List;
+
 /**
  * Model service
  * @author Elone Hoo <huchengyea@163.com>
@@ -21,4 +23,10 @@ public interface ModelService {
    * @return model entity
    */
   Model getById(String modelId);
+
+  /**
+   * Get all model entity
+   * @return model entity list
+   */
+  List<Model> getAll();
 }

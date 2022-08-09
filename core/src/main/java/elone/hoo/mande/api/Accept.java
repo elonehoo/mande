@@ -5,7 +5,6 @@ import com.restful.Result;
 import elone.hoo.mande.entity.history.dto.InstallHistory;
 import elone.hoo.mande.entity.model.po.Model;
 import elone.hoo.mande.entity.whitelist.po.Whitelist;
-import elone.hoo.mande.plugins.multiValueMap.MultiValueMapPlugins;
 import elone.hoo.mande.service.history.HistoryService;
 import elone.hoo.mande.service.model.ModelService;
 import elone.hoo.mande.service.whitelist.WhitelistService;
@@ -51,6 +50,11 @@ public class Accept {
       return new Result(accept.body(), HttpStatus.valueOf(accept.getStatus()));
     }
     return Result.success(true);
+  }
+
+  @GetMapping("/model")
+  public Result getModel(){
+    return Result.success(modelService.getAll());
   }
 
 }
