@@ -1,4 +1,4 @@
-package elone.hoo.lib;
+package elone.hoo.mande;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
