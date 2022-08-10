@@ -38,6 +38,12 @@ export default defineConfig({
       pattern: 'https://github.com/elonehoo/mande/tree/main/docs/:path',
       text: 'Suggest changes to this page',
     },
+    localeLinks: {
+      text: 'English',
+      items: [
+        { text: '简体中文', link: 'https://cn-mande.netlify.app' },
+      ],
+    },
     socialLinks: [
       { icon: 'twitter', link: twitter },
       { icon: 'discord', link: discord },
