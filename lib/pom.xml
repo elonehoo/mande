@@ -13,7 +13,7 @@
   <groupId>io.github.xiaoxunyao</groupId>
   <artifactId>spring-boot-starter-mande</artifactId>
   <url>https://github.com/elonehoo/mande</url>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <name>spring-boot-starter-mande</name>
   <description>SpringBoot fast package for core control mande</description>
 
