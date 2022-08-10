@@ -4,9 +4,9 @@ outline: deep
 
 # lib
 
-SpringBoot fast package for core control mande
+Mande 的 SpringBoot 官方插件
 
-## Install
+## 安装
 
 ### maven
 
@@ -26,7 +26,7 @@ implementation 'io.github.xiaoxunyao:spring-boot-starter-mande:0.0.1'
 
 ## Config
 
-Quick and easy configuration of mande in yml
+在 yml 中快速简单地配置 mande
 
 ```yaml
 # application.yml
@@ -77,4 +77,4 @@ public class Hello {
 }
 ```
 
-> For details, please browse the [Example](https://github.com/elonehoo/mande/tree/main/example)
+> 详情请浏览[示例](https://github.com/elonehoo/mande/tree/main/example)

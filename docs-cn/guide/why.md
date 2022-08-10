@@ -1,35 +1,34 @@
-# Why Mande
+# 什么是 Mande
 
-:::info note
-This article defaults that you have the same needs as our team,
-and you have a unified management of an OA system,
-and this OA system has a strong uncertainty, which brings you great anxiety.
+:::info 提示
+本文默认你和我们团队有同样的需求，
+因为你有一个OA系统的统一管理，
+而且这个OA系统有很强的不确定性，
+给你带来很大的焦虑。
 :::
 
-## The need for a Mande forwarding runner
+## 对 Mande 的要求
 
-We only need mande to forward the request.
-If the target server is down, the request will be saved,
-and these unsent requests will be sent one by one through the scheduled task.
-Of course, we also combine the synchronous and asynchronous in JavaScript.
-concept. Forwarding requests in mande can also be synchronous and asynchronous.
-When we choose synchronous mande, we will directly return the content returned
-by the target server. If we choose asynchronous, unsuccessful requests will be
-stored, and subsequent requests will be made until the request is made. success.
+我们只需要 mande 来转发请求。
+如果目标服务器宕机，请求将被保存，
+而这些未发送的请求会通过定时任务一一发送。
+当然，我们也结合了 JavaScript 中的同步和异步。
+概念。 在 mande 中转发请求也可以是同步和异步的。
+当我们选择同步时，mande会直接返回目标服务器的内容
+如果我们选择异步，不成功的请求会
+存储，并后续持续的发送请求，知道这个请求被发送成功。
 
-Of course, there is another advantage of using mande.
-We can run mande on an independent server,
-so that our APP can have many independent application terminals,
-and only need to configure the IP address of mande once on the OA,
-and our application The ends can be all over the place.
+当然，使用 mande 还有另一个好处。
+我们可以在独立的服务器上运行 mande，
+让我们的APP可以有很多独立的应用终端，
+并且只需要在OA上配置一次mande的IP地址，
+而我们的独立端应用可以无处不在。
 
-Continue reading in the [Getting Started Guide](/guide/).
+继续阅读 [快速起步](/guide/)。
 
-## How is Mande Different from X?
+## Mande 与 X 有何不同？
 
-Since there is really no middleware that is the same as mande,
-it is not very comparable. If we find similar middleware,
-then we will use it and feel the difference between the two.
+目前没有和 Mande 有一样功能的中间件，所以没有可以比较的地方。
+如果我们找到类似的中间件，那我们也会感受一下两者的区别。
 
-Of course, it may also be that we have completely different brains,
-so we have a completely different demand.
+当然，也可能是我们的大脑完全不同，所以我们有完全不同的需求。

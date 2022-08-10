@@ -1,14 +1,15 @@
-# Usage
+# 使用
 
-For specific use, you need to move to the [docs](/components/) to browse
+具体使用需要移步到 [docs](/components/) 浏览
 
 ## core
 
-At present, only the core is initially completed. You can clone the source code, modify it, and then package and deploy it.
+目前只初步完成核心。你可以克隆源代码，对其进行修改，然后对其进行打包和部署。
 
-PS:
-Need to pay attention when running, he will soon have HMR ability, so be mentally prepared, we start racing
+::: warning
+  运行的时候需要注意，他们有这很快的 HMR，做好心理准备，我们开始了。
+:::
 
 ## lib
 
-You can go here to see [its](/components/lib) specific use
+你可以去[这里](/components/lib)查看具体的使用

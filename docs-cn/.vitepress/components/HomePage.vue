@@ -9,7 +9,7 @@ import { teamMembers } from '../contributors'
       <main class="main">
         <div class="vp-doc" flex flex-col items-center mt-10>
           <h2 id="meet-the-team" op50 font-normal p="t-10 b-2">
-            Meet The Team
+            认识一下团队
           </h2>
           <div w-full p-10>
             <VPTeamMembers size="small" :members="teamMembers" />

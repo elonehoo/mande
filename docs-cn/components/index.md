@@ -1,19 +1,19 @@
-# introduce
+# 介绍
 
 ## core
 
-This is the core package of mande.
-Mande is a middleware that interacts through HTTP requests,
-so its initial template is very simple,
-and its scalability is also weakened,
-but it satisfies the forwarding requirement very well.
-This is also the advantage of mande.
+这是 Mande 的核心包。
+Mande 是一个通过HTTP请求进行交互的中间件，
+所以它的初始模板非常简单，
+并且它的可扩展性也被削弱了，
+但它很好地满足了转发要求。
+这也是 Mande 的优势所在。
 
 ## lib
 
-This is a springBoot plug-in for mande,
-which can be used as simple as we use Service to use mande.
-Of course, if there is any extension to mande,
-then this plug-in also needs to be changed accordingly.
-Of course, we will follow the business and skills in the future.
-Update to update the extensibility of this plugin.
+这是 mande 的 springBoot 插件，
+这可以像我们使用 Service 来使用 mande 一样简单。
+当然，如果 Mande 有任何延伸，
+那么这个插件也需要做相应的改动。
+当然，我们以后会关注业务和技能。
+更新以更新此插件的可扩展性。

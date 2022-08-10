@@ -2,19 +2,25 @@
 outline: deep
 ---
 
-# Getting Started
+# 快速起步
 
-## Overview
+## 总览
 
-In the business, we may request the target server, but the target server is continuously attacked to the point of downtime, causing the business to stagnate, so we can only return an Error angrily, which will cause irreparable damage to the user, so Mande created us You can record the interface of the target server in Mande, and then send the request to Mande, and Mande will forward these requests. If the target server is down, Mande will continue to send requests until it succeeds. That way our business can continue.
+在业务中，我们可能会请求目标服务器，但是目标服务器不断被攻击到宕机的地步，
+导致业务停滞不前，所以只能返回一个 Error，
+会给用户造成无法挽回的损失，
+但是现在可以在 Mande 中记录目标服务器的接口，
+然后向 Mande 发送请求，Mande 会转发这些请求。
+如果目标服务器宕机，Mande 会继续发送请求，直到成功。
+这样我们的业务才能继续。
 
-You can learn more about the rationale behind the project in the [Why Mande](why) section.
+您可以在[什么是 Mande ](why)部分了解有关该项目背后的基本原理的更多信息。
 
-## Environmental support
+## 环境支持
 
-This is the environment in which I wrote Mande, and it does not mean that it must be run in this environment, but you can rest assured that there will be no errors in the environment below.
+这是我写 Mande 的环境，并不代表一定要在这个环境下运行，但是大家可以放心，下面的环境是不会出错的。
 
-- JDK>= 17.0.2
-- Node>= 16.15.1
+- JDK >= 17.0.2
+- Node >= 16.15.1
 - pnpm >= 7.9.0
 - vite >= 3

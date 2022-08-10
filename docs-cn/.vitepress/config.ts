@@ -11,7 +11,7 @@ import {
 } from './meta'
 
 export default defineConfig({
-  lang: 'en-US',
+  lang: 'zh-CN',
   title: name,
   description: description,
   head: [
@@ -36,7 +36,13 @@ export default defineConfig({
     logo: '/logo.svg',
     editLink: {
       pattern: 'https://github.com/elonehoo/mande/tree/main/docs/:path',
-      text: 'Suggest changes to this page',
+      text: '为此页提供修改建议',
+    },
+    localeLinks: {
+      text: '简体中文',
+      items: [
+        { text: 'English', link: 'https://mande.elonehoo.xyz' },
+      ],
     },
     socialLinks: [
       { icon: 'twitter', link: twitter },
@@ -48,13 +54,13 @@ export default defineConfig({
       copyright: 'Copyright © 2022-PRESENT Elone Hoo, zhy and Mande contributors',
     },
     nav: [
-      { text: 'Guide', link: '/guide/' },
-      { text: 'Docs', link: '/components/' },
+      { text: '指南', link: '/guide/' },
+      { text: '文档', link: '/components/' },
       {
         text: `v${version}`,
         items: [
           {
-            text: 'Release Notes ',
+            text: '版本发布',
             link: releases,
           },
         ],
@@ -64,18 +70,18 @@ export default defineConfig({
       // TODO: bring sidebar of apis and config back
       '/guide/': [
         {
-          text: 'Getting Started',
+          text: '快速开始',
           items: [
             {
-              text: 'Why mande',
+              text: '简介',
               link: '/guide/why',
             },
             {
-              text: 'Installation',
+              text: '安装',
               link: '/guide/',
             },
             {
-              text: 'Usage',
+              text: '使用',
               link: '/guide/usage',
             },
           ],
