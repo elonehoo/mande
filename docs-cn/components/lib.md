@@ -14,14 +14,14 @@ Mande 的 SpringBoot 官方插件
 <dependency>
   <groupId>io.github.xiaoxunyao</groupId>
   <artifactId>spring-boot-starter-mande</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
 </dependency>
 ```
 
 ### gradle
 
 ```groovy
-implementation 'io.github.xiaoxunyao:spring-boot-starter-mande:0.0.1'
+implementation 'io.github.xiaoxunyao:spring-boot-starter-mande:0.0.2'
 ```
 
 ## Config
