@@ -32,7 +32,7 @@ const plainTeamMembers: CoreTeam[] = [
     name: 'Elone Hoo',
     github: 'elonehoo',
     twitter: 'huchengye',
-    title: 'A fullstack and PWA developer',
+    title: 'A fanatical open sourceror',
     desc: 'Vite\'s fanatical follower',
   },
   {
