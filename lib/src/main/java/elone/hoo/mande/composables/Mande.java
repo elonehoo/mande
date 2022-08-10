@@ -10,14 +10,18 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 @RequiredArgsConstructor
 public class Mande {
 
+  private Logger log = Logger.getLogger("elone.hoo.example.composables");
+
   private final MandeStore mandeStore;
 
   public HttpResponse useAccept(Promise promise, String modelId, Map<String,String> body, Map<String,String> headers) {
-    HttpRequest request = RequestPlugin.useRequest(mandeStore.getUrl() + "accept/", "post");
+    log.info("useAccept" + log.getName() + "[ " + "start" + " ]");
+    HttpRequest request = RequestPlugin.useRequest(mandeStore.getUrl() + "/accept/", "post");
     headers.put("app-key", mandeStore.getAppKey());
     headers.put("promise",promise.getValue());
     RequestPlugin.useHeaders(request, headers);
@@ -27,7 +31,8 @@ public class Mande {
   }
 
   public HttpResponse useAllModel(){
-    HttpRequest request = RequestPlugin.useRequest(mandeStore.getUrl() + "accept/model", "get");
+    log.info("useAllModel" + log.getName() + "[ " + "start" + " ]");
+    HttpRequest request = RequestPlugin.useRequest(mandeStore.getUrl() + "/accept/model", "get");
     HashMap<String, String> headers = new HashMap<>();
     headers.put("app-key", mandeStore.getAppKey());
     RequestPlugin.useHeaders(request, headers);
