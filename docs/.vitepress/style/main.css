@@ -1,5 +1,3 @@
-/* Overrides */
-
 .dark [img-light] {
   display: none;
 }
@@ -7,6 +5,8 @@
 html:not(.dark) [img-dark] {
   display: none;
 }
+
+/* Overrides */
 
 .VPSocialLink {
   transform: scale(0.9);
@@ -30,3 +30,47 @@ img.resizable-img {
   height: unset;
 }
 
+/* fix height ~ 2 lines of text: 3 or more cards per row */
+.VPTeamMembersItem.small .profile .data .affiliation {
+  min-height: 3rem;
+}
+.VPTeamMembersItem.small .profile .data .desc {
+  min-height: 3rem;
+}
+
+/* fix height ~ 3 lines of text: 4 cards per row */
+@media (min-width: 1064px) and (max-width: 1143px) {
+  .VPTeamMembersItem.small .profile .data .affiliation {
+    min-height: 4rem;
+  }
+  .VPTeamMembersItem.small .profile .data .desc {
+    min-height: 4rem;
+  }
+}
+/* fix height ~ 3 lines of text: 3 cards per row */
+@media (min-width: 815px) and (max-width: 875px) {
+  .VPTeamMembersItem.small .profile .data .affiliation {
+    min-height: 4rem;
+  }
+  .VPTeamMembersItem.small .profile .data .desc {
+    min-height: 4rem;
+  }
+}
+/* fix height ~ 3 lines of text: 2 cards per row */
+@media (max-width: 612px) {
+  .VPTeamMembersItem.small .profile .data .affiliation {
+    min-height: 4rem;
+  }
+  .VPTeamMembersItem.small .profile .data .desc {
+    min-height: 4rem;
+  }
+}
+/* fix height: one card per row */
+@media (max-width: 568px) {
+  .VPTeamMembersItem.small .profile .data .affiliation {
+    min-height: unset;
+  }
+  .VPTeamMembersItem.small .profile .data .desc {
+    min-height: unset;
+  }
+}

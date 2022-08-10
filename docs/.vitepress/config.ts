@@ -89,6 +89,10 @@ export default defineConfig({
               text: 'core',
               link: '/components/core',
             },
+            {
+              text: 'lib',
+              link: '/components/lib',
+            },
           ],
         },
       ],

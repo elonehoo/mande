@@ -5,10 +5,19 @@
   "private": true,
   "scripts": {
     "dev": "vitepress --port 3344 --open",
-    "build": "vitepress build",
+    "build": "vitepress build && esno .vitepress/scripts/build-pwa.ts",
     "serve": "vitepress serve"
   },
   "devDependencies": {
+    "@unocss/reset": "^0.45.5",
+    "@vitejs/plugin-vue": "^3.0.1",
+    "esno": "^0.16.3",
+    "fast-glob": "^3.2.11",
+    "pnpm": "^7.9.0",
+    "typescript": "^4.7.4",
+    "unocss": "^0.45.5",
+    "vite": "^3.0.5",
+    "vite-plugin-pwa": "^0.12.3",
     "vitepress": "1.0.0-alpha.4",
     "vue": "3.2.37"
   }

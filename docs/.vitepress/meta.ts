@@ -12,3 +12,7 @@ export const github = 'https://github.com/elonehoo/mande'
 export const releases = 'https://github.com/elonehoo/mande/releases'
 export const discord = 'https://discord.gg/Fry7332ar7'
 export const twitter = 'https://twitter.com/huchengye'
+
+/* Avatar/Image/Sponsors servers */
+export const preconnectLinks = [googleapis, gstatic]
+export const preconnectHomeLinks = [googleapis, gstatic]
