@@ -1,2 +1,9 @@
 server:
   port: 7799
+  servlet:
+    context-path: /example
+
+mande:
+  url: http://localhost:8080/mande
+  appKey:
+
