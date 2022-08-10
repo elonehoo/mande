@@ -35,7 +35,7 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.svg',
     editLink: {
-      pattern: 'https://github.com/elonehoo/mande/tree/main/docs/:path',
+      pattern: 'https://github.com/elonehoo/mande/tree/main/docs-cn/:path',
       text: '为此页提供修改建议',
     },
     localeLinks: {
