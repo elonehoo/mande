@@ -45,7 +45,7 @@ export default defineConfig({
     ],
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2022-PRESENT Elone Hoo',
+      copyright: 'Copyright © 2022-PRESENT Elone Hoo, zhy and Mande contributors',
     },
     nav: [
       { text: 'Guide', link: '/guide/' },
