@@ -24,7 +24,7 @@ Mande 的 SpringBoot 官方插件
 implementation 'io.github.xiaoxunyao:spring-boot-starter-mande:0.0.2'
 ```
 
-## Config
+## 配置
 
 在 yml 中快速简单地配置 mande
 
@@ -35,7 +35,7 @@ mande:
   appKey: [appkey]
 ```
 
-## Usage
+## 简单使用
 
 ```java
 import cn.hutool.http.HttpResponse;
