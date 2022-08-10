@@ -25,6 +25,7 @@ mvnw.cmd
 /nbproject/private/
 /nbbuild/
 /dist/
+dist
 /nbdist/
 /.nb-gradle/
 build/

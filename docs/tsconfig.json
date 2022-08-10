@@ -22,6 +22,7 @@
     }
   },
   "include": [
+    ".next",
     "./*.ts",
     "./.vitepress/**/*.ts",
     "./.vitepress/**/*.vue"
