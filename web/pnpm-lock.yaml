@@ -4,7 +4,7 @@ specifiers:
   '@elonehoo/eslint-config': 2.0.0
   '@iconify-json/carbon': 1.1.7
   '@types/node': 18.6.4
-  '@unocss/reset': 0.45.5
+  '@unocss/reset': 0.45.12
   '@vitejs/plugin-vue': 3.0.1
   '@vue/compiler-sfc': 3.2.37
   eslint: 8.21.0
@@ -26,7 +26,7 @@ devDependencies:
   '@elonehoo/eslint-config': 2.0.0_qugx7qdu5zevzvxaiqyxfiwquq
   '@iconify-json/carbon': 1.1.7
   '@types/node': 18.6.4
-  '@unocss/reset': 0.45.5
+  '@unocss/reset': 0.45.12
   '@vitejs/plugin-vue': 3.0.1_vite@3.0.5+vue@3.2.37
   '@vue/compiler-sfc': 3.2.37
   eslint: 8.21.0
@@ -611,6 +611,10 @@ packages:
     dependencies:
       '@unocss/core': 0.45.5
       '@unocss/preset-mini': 0.45.5
+    dev: true
+
+  /@unocss/reset/0.45.12:
+    resolution: {integrity: sha512-4HldzkLErjp90W9RMkMgnDbFQzZNz+cpLTB/3Wnj9UqvIBYAZ+gfZ7Y7YEntFKmHLMV1W+6emnuMNI4qS3B0Jg==}
     dev: true
 
   /@unocss/reset/0.45.5:
