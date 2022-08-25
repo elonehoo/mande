@@ -67,6 +67,14 @@ const plainTeamMembers: CoreTeam[] = [
     title: 'An open source developer',
     desc: 'Core team member of INet',
   },
+  {
+    avatar: 'https://github.com/qiuzhe-top.png',
+    name: '秋哲',
+    github: 'qiuzhe-top',
+    twitter: 'unknown',
+    title: 'Very disciplined programmer',
+    desc: 'Creator / project lead of ChileCat',
+  },
 ]
 
 const teamMembers = plainTeamMembers.map(tm => createLinks(tm))
