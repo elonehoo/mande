@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@types/node': 18.7.13
   '@unocss/reset': 0.45.12
-  '@vitejs/plugin-vue': 3.0.3
+  '@vitejs/plugin-vue': 3.1.0
   esno: 0.16.3
   fast-glob: 3.2.12
   fs-extra: 10.1.0
@@ -26,7 +26,7 @@ dependencies:
 
 devDependencies:
   '@unocss/reset': 0.45.12
-  '@vitejs/plugin-vue': 3.0.3_vite@3.0.9+vue@3.2.37
+  '@vitejs/plugin-vue': 3.1.0_vite@3.0.9+vue@3.2.37
   esno: 0.16.3
   fast-glob: 3.2.12
   fs-extra: 10.1.0
@@ -1753,8 +1753,8 @@ packages:
       vite: 3.0.9
     dev: true
 
-  /@vitejs/plugin-vue/3.0.3_vite@3.0.9+vue@3.2.37:
-    resolution: {integrity: sha512-U4zNBlz9mg+TA+i+5QPc3N5lQvdUXENZLO2h0Wdzp56gI1MWhqJOv+6R+d4kOzoaSSq6TnGPBdZAXKOe4lXy6g==}
+  /@vitejs/plugin-vue/3.1.0_vite@3.0.9+vue@3.2.37:
+    resolution: {integrity: sha512-fmxtHPjSOEIRg6vHYDaem+97iwCUg/uSIaTzp98lhELt2ISOQuDo2hbkBdXod0g15IhfPMQmAxh4heUks2zvDA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^3.0.0
@@ -4398,7 +4398,7 @@ packages:
     dependencies:
       '@docsearch/css': 3.2.1
       '@docsearch/js': 3.2.1_tbpndr44ulefs3hehwpi2mkf2y
-      '@vitejs/plugin-vue': 3.0.3_vite@3.0.9+vue@3.2.37
+      '@vitejs/plugin-vue': 3.1.0_vite@3.0.9+vue@3.2.37
       '@vue/devtools-api': 6.2.1
       '@vueuse/core': 9.1.1_vue@3.2.37
       body-scroll-lock: 4.0.0-beta.0
