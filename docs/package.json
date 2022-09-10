@@ -14,7 +14,7 @@
     "@unocss/reset": "0.45.12",
     "@vitejs/plugin-vue": "3.0.3",
     "esno": "0.16.3",
-    "fast-glob": "3.2.11",
+    "fast-glob": "3.2.12",
     "fs-extra": "10.1.0",
     "https-localhost": "4.7.1",
     "pnpm": "7.9.5",
