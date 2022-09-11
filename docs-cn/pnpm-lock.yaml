@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/node': 18.7.13
-  '@unocss/reset': 0.45.12
+  '@unocss/reset': 0.45.18
   '@vitejs/plugin-vue': 3.1.0
   esno: 0.16.3
   fast-glob: 3.2.12
@@ -25,7 +25,7 @@ dependencies:
   ts-node: 10.9.1_fvhkjzuicp3padoxzsqmc5c2da
 
 devDependencies:
-  '@unocss/reset': 0.45.12
+  '@unocss/reset': 0.45.18
   '@vitejs/plugin-vue': 3.1.0_vite@3.0.9+vue@3.2.39
   esno: 0.16.3
   fast-glob: 3.2.12
@@ -1698,10 +1698,6 @@ packages:
     dependencies:
       '@unocss/core': 0.45.18
       '@unocss/preset-mini': 0.45.18
-    dev: true
-
-  /@unocss/reset/0.45.12:
-    resolution: {integrity: sha512-4HldzkLErjp90W9RMkMgnDbFQzZNz+cpLTB/3Wnj9UqvIBYAZ+gfZ7Y7YEntFKmHLMV1W+6emnuMNI4qS3B0Jg==}
     dev: true
 
   /@unocss/reset/0.45.18:
