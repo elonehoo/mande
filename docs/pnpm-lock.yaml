@@ -15,7 +15,7 @@ specifiers:
   unocss: 0.45.18
   vite: 3.0.9
   vite-plugin-pwa: 0.12.3
-  vitepress: 1.0.0-alpha.10
+  vitepress: 1.0.0-alpha.13
   vue: 3.2.39
   workbox-window: 6.5.4
 
@@ -36,7 +36,7 @@ devDependencies:
   unocss: 0.45.18_vite@3.0.9
   vite: 3.0.9
   vite-plugin-pwa: 0.12.3_yny4xarjh5jmdjqikwv2mudeou
-  vitepress: 1.0.0-alpha.10_tbpndr44ulefs3hehwpi2mkf2y
+  vitepress: 1.0.0-alpha.13_tbpndr44ulefs3hehwpi2mkf2y
   vue: 3.2.39
   workbox-window: 6.5.4
 
@@ -4392,8 +4392,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.10_tbpndr44ulefs3hehwpi2mkf2y:
-    resolution: {integrity: sha512-RGPU+YApj2jaYplAIJUe+2qlDks9FzPX1QGK+7NdGByeCCVZg6z9eYWjjvfvA/sgCtG3yeJE/4/jCwlv4Y8bVw==}
+  /vitepress/1.0.0-alpha.13_tbpndr44ulefs3hehwpi2mkf2y:
+    resolution: {integrity: sha512-gCbKb+6o0g5wHt2yyqBPk7FcvrB+MfwGtg1JMS5p99GTQR87l3b7symCl8o1ecv7MDXwJ2mPB8ZrYNLnQAJxLQ==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.2.1

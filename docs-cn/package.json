@@ -22,7 +22,7 @@
     "unocss": "0.45.18",
     "vite": "3.0.9",
     "vite-plugin-pwa": "0.12.3",
-    "vitepress": "1.0.0-alpha.10",
+    "vitepress": "1.0.0-alpha.13",
     "vue": "3.2.39",
     "workbox-window": "6.5.4"
   },
