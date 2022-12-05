@@ -6,7 +6,7 @@ specifiers:
   '@vitejs/plugin-vue': 3.1.0
   esno: 0.16.3
   fast-glob: 3.2.12
-  fs-extra: 10.1.0
+  fs-extra: 11.1.0
   https-localhost: 4.7.1
   patch-package: 6.4.7
   pnpm: 7.11.0
@@ -29,7 +29,7 @@ devDependencies:
   '@vitejs/plugin-vue': 3.1.0_vite@3.1.0+vue@3.2.39
   esno: 0.16.3
   fast-glob: 3.2.12
-  fs-extra: 10.1.0
+  fs-extra: 11.1.0
   https-localhost: 4.7.1
   pnpm: 7.11.0
   typescript: 4.8.3
@@ -3006,9 +3006,9 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
-  /fs-extra/10.1.0:
-    resolution: {integrity: sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==}
-    engines: {node: '>=12'}
+  /fs-extra/11.1.0:
+    resolution: {integrity: sha512-0rcTq621PD5jM/e0a3EJoGC/1TC5ZBCERW82LQuwfGnCa1V8w7dpYH1yNu+SLb6E5dkeCBzKEyLGlFrnr+dUyw==}
+    engines: {node: '>=14.14'}
     dependencies:
       graceful-fs: 4.2.10
       jsonfile: 6.1.0
@@ -4000,6 +4000,7 @@ packages:
 
   /rollup-plugin-terser/7.0.2_rollup@2.78.1:
     resolution: {integrity: sha512-w3iIaU4OxcF52UUXiZNsNeuXIMDvFrr+ZXK6bFZ0Q60qyVfq4uLptoS4bbq3paG3x216eQllFZX7zt6TIImguQ==}
+    deprecated: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
     peerDependencies:
       rollup: ^2.0.0
     dependencies:
