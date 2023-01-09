@@ -11,24 +11,24 @@
     "serve": "vitepress serve"
   },
   "devDependencies": {
-    "@unocss/reset": "0.45.18",
-    "@vitejs/plugin-vue": "3.1.0",
+    "@unocss/reset": "0.48.3",
+    "@vitejs/plugin-vue": "3.2.0",
     "esno": "0.16.3",
     "fast-glob": "3.2.12",
     "fs-extra": "10.1.0",
     "https-localhost": "4.7.1",
-    "pnpm": "7.11.0",
-    "typescript": "4.8.3",
-    "unocss": "0.45.18",
-    "vite": "3.1.0",
-    "vite-plugin-pwa": "0.12.7",
-    "vitepress": "1.0.0-alpha.13",
-    "vue": "3.2.39",
+    "pnpm": "7.23.0",
+    "typescript": "4.9.4",
+    "unocss": "0.48.3",
+    "vite": "3.2.5",
+    "vite-plugin-pwa": "0.14.1",
+    "vitepress": "1.0.0-alpha.35",
+    "vue": "3.2.45",
     "workbox-window": "6.5.4"
   },
   "dependencies": {
-    "@types/node": "18.7.13",
-    "patch-package": "6.4.7",
+    "@types/node": "18.11.18",
+    "patch-package": "6.5.1",
     "ts-node": "10.9.1"
   }
 }
