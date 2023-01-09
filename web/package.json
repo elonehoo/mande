@@ -10,23 +10,23 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "vue": "3.2.39",
-    "vue-router": "4.1.5"
+    "vue": "3.2.45",
+    "vue-router": "4.1.6"
   },
   "devDependencies": {
     "@elonehoo/eslint-config": "2.0.0",
-    "@iconify-json/carbon": "1.1.7",
-    "@types/node": "18.6.4",
-    "@unocss/reset": "0.45.18",
-    "@vitejs/plugin-vue": "3.1.0",
-    "@vue/compiler-sfc": "3.2.39",
-    "eslint": "8.23.0",
-    "pnpm": "7.11.0",
+    "@iconify-json/carbon": "1.1.13",
+    "@types/node": "18.11.18",
+    "@unocss/reset": "0.48.3",
+    "@vitejs/plugin-vue": "3.2.0",
+    "@vue/compiler-sfc": "3.2.45",
+    "eslint": "8.31.0",
+    "pnpm": "7.23.0",
     "ts-node": "10.9.1",
-    "typescript": "4.8.3",
-    "unocss": "0.45.18",
-    "vite": "3.1.0",
-    "vitest": "0.23.2",
+    "typescript": "4.9.4",
+    "unocss": "0.48.3",
+    "vite": "3.2.5",
+    "vitest": "0.26.3",
     "vue-tsc": "0.40.13"
   }
 }
